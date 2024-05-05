@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                   )
                 )
             ),
-            const Gap(25 * 2),
+            const Gap(40),
           ],
         ),
       ),
