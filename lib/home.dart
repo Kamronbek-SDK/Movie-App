@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.only(left: 12),
           child: Icon(CupertinoIcons.film),
         ),
-        title: const Text("Movie Plus", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),),
+        title: const Text("Movie plus", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),),
         actions: const [
           Padding(
           padding: EdgeInsets.all(10),
