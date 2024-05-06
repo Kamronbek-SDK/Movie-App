@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter212/class.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:gap/gap.dart';
-import 'package:url_launcher/url_launcher.dart';
+//import 'package:url_launcher/url_launcher.dart';
 
 class TheFilm extends StatelessWidget {
   const TheFilm({super.key, required this.abFilm});
@@ -135,13 +135,17 @@ class TheFilm extends StatelessWidget {
                         Wrap(
                           children: [
                             const Text('\nRead more: ', style: TextStyle(fontSize: 18,),),
-                            CupertinoButton(child: Text(abFilm.link, style: const TextStyle(color: CupertinoColors.activeBlue),), onPressed: () => _launcher(abFilm.link)),
+                            CupertinoButton(child: Text(abFilm.link, style: const TextStyle(color: CupertinoColors.activeBlue),), onPressed: (){
+                              //_launcher(abFilm.link);
+                            }),
                           ],
                         ),
                         Wrap(
                           children: [
                             const Text('\nWatch online: ', style: TextStyle(fontSize: 18,),),
-                            CupertinoButton(child: Text(abFilm.watchLink, style: const TextStyle(color: CupertinoColors.activeBlue),), onPressed: () => _launcher(abFilm.watchLink)),
+                            CupertinoButton(child: Text(abFilm.watchLink, style: const TextStyle(color: CupertinoColors.activeBlue),), onPressed: (){
+                              //_launcher(abFilm.watchLink);
+                            }),
                           ],
                         ),
                         const Gap(120),
@@ -172,7 +176,7 @@ class TheFilm extends StatelessWidget {
                         child: Row(
                           children: [
                             SizedBox(
-                                width: 220,
+                                width: MediaQuery.of(context).size.width - 200,
                                 height: 55,
                                 child: ElevatedButton(
                                     onPressed: () {},
@@ -218,7 +222,7 @@ class TheFilm extends StatelessWidget {
      onRatingUpdate: (double value) {},);
   }
 
-  void _launcher(String link) async {
-    await launchUrl(Uri.parse(link));
-  }
+  // void _launcher(String link) async {
+  //   await launchUrl(Uri.parse(link));
+  // }
 }
